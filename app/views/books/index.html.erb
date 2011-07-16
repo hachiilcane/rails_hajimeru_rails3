@@ -18,6 +18,9 @@
     <td>
       <%= link_to "修正", [ :edit, book ] %>
     </td>
+    <td>
+      <%= link_to "削除", book, {:method => :delete, :confirm => "本当に削除してしまうのですか？"} %>
+    </td>
   </tr>
   <% end %>
 </table>
