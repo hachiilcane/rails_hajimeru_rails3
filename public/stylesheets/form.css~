@@ -1,0 +1,11 @@
+form {
+    width: 600;
+    margin: 5px;
+    padding: 0.5em;
+    border: solid 1px #aaa;
+}
+
+form label {
+    width: 100px;
+    float: left;
+}

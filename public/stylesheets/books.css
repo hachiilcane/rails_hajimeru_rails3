@@ -1,0 +1,12 @@
+table.books {
+
+}
+
+table.books tr {
+    border: solid 1px #ccc;
+}
+
+table.books col.title {
+    width: 300px;
+}
+
