@@ -1,10 +1,15 @@
 table.books {
-
+    border: solid 1px #ccc;
 }
 
 table.books tr {
     border: solid 1px #ccc;
 }
+
+table.books td {
+    border: solid 1px #ccc;
+}
+
 
 table.books col.title {
     width: 300px;

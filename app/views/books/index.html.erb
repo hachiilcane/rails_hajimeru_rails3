@@ -15,6 +15,9 @@
     <td>
       <%= book.publish_year %>
     </td>
+    <td>
+      <%= link_to "修正", [ :edit, book ] %>
+    </td>
   </tr>
   <% end %>
 </table>
