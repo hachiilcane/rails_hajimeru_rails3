@@ -1,0 +1,13 @@
+ul.navigation {
+    margin: 10px 0px 0px;
+    padding: 2px;
+    list-style: none;
+}
+
+ul.navigation li {
+    display: inline;
+}
+
+ul.navigation li.selected {
+    background-color: #ccf;
+}
