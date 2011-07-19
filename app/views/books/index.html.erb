@@ -1,12 +1,25 @@
 <h1>Books</h1>
 
+<% if params[:action] == "index" || params[:action] == "search_checked_in" %>
+<%= form_tag [ :search_checked_in, :books ], :method => :get, :style => "text-align : right" do%>
+<%= text_field_tag "query", params[:query] %>
+<%= submit_tag "検索" %>
+<% end %>
+<% else %>
+<%= form_tag [ :search_checked_out, :books ], :method => :get, :style => "text-align : right" do%>
+<%= text_field_tag "query", params[:query] %>
+<%= submit_tag "検索" %>
+<% end %>
+<% end %>
+
+
 <ul class="navigation">
-  <% if params[:action] == "index" %>
+  <% if params[:action] == "index" || params[:action] == "search_checked_in" %>
   <li class="selected">在庫リスト</li>
   <% else %>
   <li><%= link_to "在庫", :books %></li>
   <% end %>
-  <% if params[:action] == "checked_out" %>
+  <% if params[:action] == "checked_out" || params[:action] == "search_checked_out" %>
   <li class="selected">貸し出し中リスト</li>
   <% else %>
   <li><%= link_to "貸し出し中", [ :checked_out, :books ] %></li>
