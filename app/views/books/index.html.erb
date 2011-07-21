@@ -49,6 +49,11 @@
 </table>
 
 <p>
+  <%= will_paginate(@books, :previous_label => '前', :next_label => '後',
+  :inner_window => 2, :outer_window => 2) %>
+</p>
+
+<p>
   <%= link_to "本の新規登録", [ :new, :book ] %>
 </p>
 

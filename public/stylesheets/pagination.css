@@ -1,0 +1,9 @@
+div.pagination {
+    text-align: center;
+}
+
+div.pagination em {
+    background-color: #ccc;
+    font-weight: bold;
+    padding: 5px;
+}

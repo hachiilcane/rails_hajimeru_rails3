@@ -1,22 +1,24 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.checked_in
+    @books = Book.checked_in.paginate(:page => params[:page], :per_page => 5)
   end
 
   def checked_out
-    @books = Book.checked_out
+    @books = Book.checked_out.paginate(:page => params[:page], :per_page => 5)
     render :index
   end
 
   def search_checked_in
     @books = Book.checked_in
     @books = @books.search(params[:query]) if params[:query].present?
+    @books = @books.paginate(:page => params[:page], :per_page => 5)
     render :index
   end
 
   def search_checked_out
     @books = Book.checked_out
     @books = @books.search(params[:query]) if params[:query].present?
+    @books = @books.paginate(:page => params[:page], :per_page => 5)
     render :index
   end
 
