@@ -4,4 +4,8 @@ class Book < ActiveRecord::Base
   scope :search, lambda { |query|
     where([ "title LIKE ?", "%#{query}%" ])
   }
+
+  validates :title, :presence => true, :length => { :maximum => 80 }
+  validates :authors, :length => { :maximum => 80 }
+  validates :comment, :length => { :maximum => 400 }
 end
