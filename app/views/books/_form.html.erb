@@ -1,10 +1,17 @@
 <%= form_for @book do |form| %>
-<% unless @book.errors.empty? %><p>入力内容に誤りがあります。色のついたところを修正してください。</p><% end %>
+<% unless @book.errors.empty? %>
+<p>入力内容に誤りがあります。</p>
+<ul class="error_messages">
+  <% @book.errors.full_messages.each do |m| %>
+  <li><%= m %></li>
+  <% end %>
+</ul>
+<% end %>
 <ul>
-  <li><%= form.label :title, "タイトル" %><%= form.text_field :title %></li>
-  <li><%= form.label :authors, "著者" %><%= form.text_field :authors %></li>
-  <li><%= form.label :publish_year, "出版年" %><%= form.select :publish_year, 1980..2012 %></li>
-  <li><%= form.label :comment , "コメント" %><%= form.text_area :comment %></li>
+  <li><%= form.label :title %><%= form.text_field :title %></li>
+  <li><%= form.label :authors %><%= form.text_field :authors %></li>
+  <li><%= form.label :publish_year %><%= form.select :publish_year, 1980..2012 %></li>
+  <li><%= form.label :comment %><%= form.text_area :comment %></li>
   <%= form.hidden_field :checked_out, :value => false %>
   <li><%= form.submit "登録" %></li>
 </ul>

@@ -54,6 +54,8 @@ GEM
       activesupport (= 3.0.5)
       bundler (~> 1.0)
       railties (= 3.0.5)
+    rails-i18n (0.1.8)
+      i18n (~> 0.5)
     railties (3.0.5)
       actionpack (= 3.0.5)
       activesupport (= 3.0.5)
@@ -86,6 +88,7 @@ PLATFORMS
 
 DEPENDENCIES
   rails (= 3.0.5)
+  rails-i18n
   rspec-rails (>= 2.0.0)
   sqlite3
   will_paginate (= 3.0.pre2)

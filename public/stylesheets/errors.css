@@ -6,3 +6,12 @@ div.field_with_errors label {
 div.field_with_errors input, div.field_with_errors textarea {
     background-color: orange;
 }
+
+ul.error_messages {
+    list-style-type: square;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin: 10px 25px;
+    color: red;
+}
