@@ -12,6 +12,7 @@
 <% end %>
 <% end %>
 
+<%= render "categories" if Category.all.present? %>
 
 <ul class="navigation">
   <% if params[:action] == "index" || params[:action] == "search_checked_in" %>

@@ -1,0 +1,5 @@
+<ul id="categories">
+  <% Category.all.each do |c| %>
+  <li><span style="color: <%= c.color %>"><%= c.name %></span></li>
+  <% end %>
+</ul>

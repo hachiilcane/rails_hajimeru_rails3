@@ -25,3 +25,9 @@ comment = "こ、こめんとぉ。"
   Book.create(:title => titles[n], :authors => authors[n], :publish_year => 1989 + n,
                :comment => comment * n, :checked_out => (n % 3 == 1) ? true : false)
 end
+
+categories = %w(趣味 ビジネス ハウツー 啓蒙)
+colors = [ "#000", "#c00", "#0c0", "#00c" ]
+4.times do |n|
+  Category.create(:name => categories[n], :color => colors[n])
+end
