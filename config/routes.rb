@@ -4,6 +4,9 @@ Shelf::Application.routes.draw do
     put :check_out, :check_in, :on => :member
     get :checked_out, :search_checked_in, :search_checked_out, :on => :collection
   end
+  resources :categories do
+    resources :books
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
