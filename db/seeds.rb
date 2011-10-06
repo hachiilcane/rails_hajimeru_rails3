@@ -31,3 +31,12 @@ colors = [ "#000", "#c00", "#0c0", "#00c" ]
 4.times do |n|
   Category.create(:name => categories[n], :color => colors[n])
 end
+
+books = Book.order('id').all
+cats = Category.order('id').all
+
+cats[1].books << books[0]
+cats[0].books << books[1]
+cats[1].books << books[2]
+cats[2].books << books[3]
+

@@ -1,6 +1,11 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.checked_in.paginate(:page => params[:page], :per_page => 5)
+    if params[:category_id]
+      @category = Category.find(params[:category_id])
+      @books = @category.books.checked_in.paginate(:page => params[:page], :per_page => 5)
+    else
+      @books = Book.checked_in.paginate(:page => params[:page], :per_page => 5)
+    end
   end
 
   def checked_out
