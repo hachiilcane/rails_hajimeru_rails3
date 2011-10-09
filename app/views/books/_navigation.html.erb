@@ -1,0 +1,12 @@
+<ul class="navigation">
+  <% if params[:action] == "index" || params[:action] == "search_checked_in" %>
+  <li class="selected">在庫リスト</li>
+  <% else %>
+  <li><%= link_to "在庫", [ @category, :books ] %></li>
+  <% end %>
+  <% if params[:action] == "checked_out" || params[:action] == "search_checked_out" %>
+  <li class="selected">貸し出し中リスト</li>
+  <% else %>
+  <li><%= link_to "貸し出し中", [ :checked_out, @category, :books ] %></li>
+  <% end %>
+</ul>

@@ -15,6 +15,10 @@ table.books col.title {
     width: 300px;
 }
 
+div#book_category {
+    font-weight: bold;
+}
+
 ul#categories {
     margin: 5px 5px;
     border: dotted 1px #ccc;
@@ -25,3 +29,8 @@ ul#categories li {
     display: inline;
     padding: 2px 5px 2px;
 }
+
+ul#categories li.selected {
+    font-weight: bolder;
+}
+

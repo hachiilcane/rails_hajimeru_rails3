@@ -1,5 +1,9 @@
 <h1><%= @book.title %><h1/>
 
+<% if @book.category %>
+<div id="book_category" style="color: <%= @book.category.color %>"><%= @book.category.name %></div>
+<% end %>
+
 <ul>
   <li><%= @book.authors %></li>
   <li><%= @book.publish_year %></li>
