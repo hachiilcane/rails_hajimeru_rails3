@@ -6,3 +6,9 @@ body {
 div#bodywrapper {
     background-color: #eee;
 }
+
+div#header, div#footer {
+    color: #aaa;
+    margin: 5px;
+    text-align: center;
+}
