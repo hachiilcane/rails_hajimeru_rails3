@@ -19,6 +19,11 @@ div#book_category {
     font-weight: bold;
 }
 
+div#book_comment {
+    margin: 5px 5px;
+    border: solid 1px #ccc;
+}
+
 ul#categories {
     margin: 5px 5px;
     border: dotted 1px #ccc;
