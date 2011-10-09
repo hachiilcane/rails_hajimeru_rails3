@@ -1,5 +1,8 @@
 <% action = params[:action] == "checked_out" ? :checked_out : nil %>
 <ul id="categories">
+  <% if @category %>
+  <li><%= link_to "すべて", [ action, :books ] %></li>
+  <% end %>
   <% Category.all.each do |c| %>
   <% if c == @category %>
   <li class="selected" style="color: <%= c.color %>"><%= c.name %></li>
