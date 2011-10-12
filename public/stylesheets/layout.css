@@ -7,7 +7,24 @@ div#bodywrapper {
     background-color: #eee;
 }
 
-div#header, div#footer {
+div#header_logo {
+    color: #aaa;
+    margin: 5px;
+    width: 200px;
+    margin-right: auto;
+    text-align: left;
+    float: left;
+}
+
+div#header_status {
+    color: #aaa;
+    margin: 5px;
+    width: 200px;
+    margin-left: auto;
+    text-align: right;
+}
+
+div#footer {
     color: #aaa;
     margin: 5px;
     text-align: center;
