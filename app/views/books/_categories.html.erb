@@ -7,7 +7,7 @@
   <% if c == @category %>
   <li class="selected" style="color: <%= c.color %>"><%= c.name %></li>
   <% else %>
-  <li><%= link_to c.name, [ action, c, :books ], :style => "color: #{c.color}" %></li>
+  <li><%= link_to "#{c.name}(#{c.books.size})", [ action, c, :books ], :style => "color: #{c.color}" %></li>
   <% end %>
   <% end %>
 </ul>
