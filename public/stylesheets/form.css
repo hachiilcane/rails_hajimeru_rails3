@@ -17,3 +17,15 @@ form label {
 form textarea {
     float: left;
 }
+
+form ul.radio_buttons {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+form ul.radio_buttons label {
+    float: none;
+}

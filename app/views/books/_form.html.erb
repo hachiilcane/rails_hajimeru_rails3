@@ -9,6 +9,7 @@
 <% end %>
 <ul>
   <li><%= form.label :title %><%= form.text_field :title %></li>
+  <li><%= form.label :category_id %><%= render "radio_buttons", :form => form %></li>
   <li><%= form.label :authors %><%= form.text_field :authors %></li>
   <li><%= form.label :publish_year %><%= form.select :publish_year, 1980..2012 %></li>
   <li><%= form.label :comment %><%= form.text_area :comment %></li>
