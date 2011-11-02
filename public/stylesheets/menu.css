@@ -1,0 +1,11 @@
+ul.menu {
+    margin: 5px;
+    padding: 6px;
+    list-style: none;
+    border: dotted 1px #ccc;
+}
+
+ul.menu li {
+    display: inline;
+    padding: 2px 5px 2px;
+}

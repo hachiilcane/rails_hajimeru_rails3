@@ -1,3 +1,5 @@
+<%= render "menu" %>
+
 <h1><%= @book.title %></h1>
 
 <div><%= @book.authors %>, <%= @book.publish_year %></div>
@@ -7,5 +9,3 @@
 <% end %>
 
 <div id="book_comment"><%= simple_format(@book.comment) %></div>
-
-<%= link_to "Go back to list", :books %>

@@ -1,0 +1,16 @@
+table.categories {
+    margin: 5px;
+    border: solid 1px #ccc;
+}
+
+table.categories col.name {
+    width: 300px;
+    background-color: #ccc;
+}
+
+table.categories col.links {
+}
+
+table.categories td {
+    border: solid 1px #ccc;
+}

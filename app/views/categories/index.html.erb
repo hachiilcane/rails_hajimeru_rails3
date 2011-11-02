@@ -1,0 +1,15 @@
+<%= render "menu" %>
+
+<h1>カテゴリーの一覧</h1>
+
+<table class="categories">
+  <col class="name" />
+  <col class="links" />
+  <% @categories.each do |c| %>
+  <tr>
+    <td style="color: <%= c.color %>"><%= c.name %> (<%= c.books.size %>)</td>
+    <td><%= links_for(c) %></td>
+  </tr>
+  <% end %>
+</table>
+

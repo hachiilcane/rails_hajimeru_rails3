@@ -1,0 +1,5 @@
+<ul class="menu">
+  <li><%= link_to_unless_current "カテゴリーの一覧", :categories %></li>
+  <li><%= link_to_unless_current "カテゴリーの新規登録", [ :new, :category ] %></li>
+  <li><%= link_to_unless_current "本の一覧へ", :books %></li>
+</ul>

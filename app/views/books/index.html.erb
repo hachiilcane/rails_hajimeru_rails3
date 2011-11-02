@@ -1,4 +1,6 @@
-<h1>Books</h1>
+<%= render "menu" %>
+
+<h1>本の一覧</h1>
 
 <% if params[:action] == "index" || params[:action] == "search_checked_in" %>
 <%= form_tag [ :search_checked_in, :books ], :method => :get, :style => "text-align : right" do%>
@@ -41,10 +43,6 @@
 <p>
   <%= will_paginate(@books, :previous_label => '前', :next_label => '後',
   :inner_window => 2, :outer_window => 2) %>
-</p>
-
-<p>
-  <%= link_to "本の新規登録", [ :new, :book ] %>
 </p>
 
 
