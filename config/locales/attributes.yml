@@ -7,4 +7,6 @@ ja:
         publish_year: 出版年
         comment: コメント
         checked_out: 貸出中
-
+      category:
+        name: 名称
+        color: 色
