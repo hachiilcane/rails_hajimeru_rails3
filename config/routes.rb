@@ -9,6 +9,8 @@ Shelf::Application.routes.draw do
       get :checked_out, :on => :collection
     end
   end
+
+  match '*anything' => 'errors#not_found'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
